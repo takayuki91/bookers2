@@ -20,7 +20,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    # その本のユーザーに変える
     @book = Book.find(params[:id])
     @user = @book.user
   end
