@@ -1,5 +1,17 @@
 class UsersController < ApplicationController
-
+  # def create
+  #   # @book = Book.new(book_params)
+  #   @book.user_id = current_user.id
+  #   if @book.save
+  #     flash[:notice] = "You have created book successfully."
+  #     redirect_to book_path(@book)
+  #   else
+  #     @books = Book.all
+  #     @user = current_user
+  #     render :index
+  #   end
+  # end
+  
   def index
     @user = current_user
     @users = User.all
@@ -7,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @books = @user.books
     @book = Book.new
   end
@@ -28,7 +40,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :introduction)
+    params.require(:user).permit(:name, :introduction, :profile_image)
   end
 
 end

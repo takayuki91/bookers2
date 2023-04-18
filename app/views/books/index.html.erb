@@ -3,8 +3,13 @@
   <%= image_tag @user.get_profile_image(100,100) %>
   <table>
     <tr></tr>
-    <th><%= @user.name %></th>
-    <th><%= @user.introduction %></th>
+    <tr>
+      <th>name</th>
+      <th><%= @user.name %></th>
+    </tr>
+      <th>introduction</th>
+      <th><%= @user.introduction %></th>
+    </tr>
   </table>
   <p><%= link_to "edit", edit_user_path(@user.id) %></p>
 </div>
