@@ -7,6 +7,10 @@ class User < ApplicationRecord
   # UserモデルとBookモデルをアソシエーション
   has_many :books, dependent: :destroy
   
+  # バリデーション
+  validates :name, uniqueness: true, length: { in: 2..20 }
+  validates :introduction, length: { maximum: 50 }
+  
   # ActiveStrageでプロフィール画像を保存できるように
   has_one_attached :profile_image
   
