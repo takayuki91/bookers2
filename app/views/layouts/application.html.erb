@@ -30,50 +30,44 @@
               <%= link_to user_path(current_user.id) , class: "nav-link text-light" do %>
                <i class="fas fa-home"></i>Home
               <% end %>
-              <!--<i class="fas fa-home"></i><%#= link_to "Home", user_path(current_user.id) %>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to users_path , class: "nav-link text-light" do %>
                <i class="fas fa-users"></i>Users
               <% end %>
-              <!--<i class="fas fa-users"></i><%#= link_to "Users", users_path %>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to books_path , class: "nav-link text-light" do %>
                <i class="fas fa-book-open"></i>Books
               <% end %>
-              <!--<i class="fas fa-book-open"></i><%#= link_to "Books", books_path %>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to destroy_user_session_path, method: :delete , class: "nav-link text-light" do %>
-               <i class="fas fa-sign-out-alt"></i>Log out
+            <i class="fas fa-sign-out-alt"></i>Log out
               <% end %>
-              <!--<i class="fas fa-sign-out-alt"></i><%#= link_to "Log out", destroy_user_session_path, method: :delete %>-->
             </li>
+
             <% else %>
+
             <li class="nav-item" style="color:white">
               <%= link_to '/', class: "nav-link text-light" do %>
                <i class="fas fa-home"></i>Home
               <% end %>
-              <!--<a class="nav-link text-light" href="/"><i class="fas fa-home"></i>Home</a>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to '/home/about', class: "nav-link text-light" do %>
                <i class="fas fa-link"></i>About
               <% end %>
-              <!--<a class="nav-link text-light" href="/home/about"><i class="fas fa-link"></i>About</a>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to '/users/sign_up', class: "nav-link text-light" do %>
                <i class="fas fa-user-plus"></i>Sign up
               <% end %>
-              <!--<a class="nav-link text-light" href="/users/sign_up"><i class="fas fa-user-plus"></i>Sign up</a>-->
             </li>
             <li class="nav-item" style="color:white">
               <%= link_to '/users/sign_in', class: "nav-link text-light" do %>
                <i class="fas fa-sign-in-alt"></i>Log in
               <% end %>
-              <!--<a class="nav-link text-light" href="/users/sign_in"><i class="fas fa-sign-in-alt"></i>Log in</a>-->
             </li>
             <% end %>
             </ul>
